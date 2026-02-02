@@ -1,45 +1,28 @@
-# MCP Integration & Setup Documentation
+# TRP 1 - MCP Setup Challenge Documentation
 
-## Overview
-This documentation explains the steps taken to set up **Tenx MCP Analytics** with GitHub Copilot for logging developer interactions.  
+## 1. What I Did
+- Updated **VS Code** to the latest version to ensure compatibility.  
+- Installed **GitHub Copilot** and **Copilot Chat** extensions.  
+- Created a rules file at `.github/copilot-instructions.md` to guide the AI agent.  
+- Configured the MCP server in `.vscode/mcp.json` with the server name `tenxfeedbackanalytics`.  
+- Added the required headers (`X-Device` and `X-Coding-Tool`) for proper logging.  
+- Enabled **Agent mode** in Copilot Chat and confirmed it responds to prompts.  
 
-The purpose is to **track interaction quality** and **feedback** without disrupting workflow.
+## 2. What Worked
+- MCP server connected successfully and logged interactions without interrupting workflow.  
+- Copilot Agent mode correctly provided suggestions according to the rules file.  
+- All configuration changes were reflected when testing the agent.  
+- Project files, including the rules and MCP setup, were pushed to GitHub.  
 
-## Setup Steps Completed
+## 3. Challenges & Troubleshooting
+- Initially had an issue with the remote URL in Git, but it was fixed by updating the remote.  
+- Some VS Code features required updating to the latest version to fully support MCP tools.  
 
-1. **VS Code Setup**
-   - Updated VS Code to the latest version.
-   - Installed GitHub Copilot and GitHub Copilot Chat extensions.
+## 4. Insights Gained
+- Rules files directly influence how the AI agent interprets prompts and responds.  
+- Proper headers and MCP server configuration are essential for logging and agent behavior.  
+- Iteratively testing changes in Agent mode helps understand how AI suggestions align with expectations.  
+- A well-configured VS Code environment ensures the agent behaves consistently and effectively.  
 
-2. **Project Preparation**
-   - Created `.github/copilot-instructions.md`.
-   - Created `.vscode/mcp.json` with MCP server configuration.
-   - Verified MCP server name: `tenxfeedbackanalytics`.
-   - Enabled headers as required (X-Device, X-Coding-Tool).
-
-3. **MCP Server Configuration**
-   - Added MCP server in VS Code using the “Add Server” button.
-   - Selected HTTP as transport.
-   - Entered URL: `https://mcpulse.10academy.org/proxy`.
-   - Authenticated with GitHub account.
-
-4. **Copilot Agent Mode**
-   - Enabled Agent mode in Copilot Chat.
-   - Verified tools icon `{}` shows MCP server.
-   - Tested interaction logging with Copilot suggestions.
-
-5. **Claude**
-   - Claude integration skipped due to **regional unavailability**.
-   - MCP logging works fully using VS Code + Copilot.
-
-6. **Submission Preparation**
-   - Verified project files are complete.
-   - Project zipped and pushed to GitHub repository: `https://github.com/mayq123/coffee-restaurant`.
-
-## Notes
-- MCP logging is **non-invasive** and runs in the background.
-- Documentation ensures **all steps are reproducible** by another developer.
-
-## Author
-- Mayq
-
+## GitHub Repository
+- [https://github.com/mayq123/coffee-restaurant](https://github.com/mayq123/coffee-restaurant)
