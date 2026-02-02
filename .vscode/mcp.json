@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "my-mcp-server-5ae6f0f0": {
+      "url": "https://mcppulse.10academy.org/proxy",
+      "type": "http",
+      "headers": {
+        "X-Device": "window",
+        "X-Coding-Tool": "vscode"
+      }
+    }
+  },
+  "inputs": []
+}
